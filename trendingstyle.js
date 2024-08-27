@@ -1,14 +1,11 @@
 
 var refresh = document.querySelector("button");
 document.querySelector("button").addEventListener("keyup", (e) => {
-  /*only works when Enter key is clicked */
-  clearOutput();
   if (e.which === 13) {
     getData();
   }
 });
 document.querySelector("button").addEventListener("click", (e) => {
-  clearOutput();
   getData();
 });
 /*Get data from the API*/
@@ -34,8 +31,4 @@ function showData(data) {
     output.innerHTML += "<img src=" + src + " >";
   });
 }
-/*clearing the ouptut*/
-function clearOutput() {
-  var output = document.querySelector(".output");
-  output.innerHTML = "";
-}
+
